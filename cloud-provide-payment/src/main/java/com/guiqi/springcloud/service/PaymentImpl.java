@@ -1,23 +1,23 @@
 package com.guiqi.springcloud.service;
 
-import com.guiqi.springcloud.dao.PaymentDao;
+import com.guiqi.springcloud.mapper.PaymentMapper;
 import com.guiqi.springcloud.pojo.Payment;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 
 @Service
 public class PaymentImpl implements PaymentService{
-    @Resource
-    PaymentDao paymentDao;
+    @Autowired
+    PaymentMapper paymentMapper;
 
     @Override
     public int create(Payment payment) {
-        return paymentDao.create(payment);
+        return paymentMapper.create(payment);
     }
 
     @Override
     public Payment queryById(long id) {
-        return paymentDao.queryById(id);
+        return paymentMapper.queryById(id);
     }
 }

@@ -1,16 +1,11 @@
-package com.guiqi.springcloud;
-
+package com.guiqi.springcloud.order;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PaymentMain {
-
-
+public class OrderMain {
     public static void main(String[] args) {
-        SpringApplication.run(PaymentMain.class, args);
+        SpringApplication.run(OrderMain.class,args);
     }
-
-
 }

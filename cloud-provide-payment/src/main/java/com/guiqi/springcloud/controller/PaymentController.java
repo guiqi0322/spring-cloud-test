@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 public class PaymentController {
     @Autowired
-    private PaymentService paymentService;
+    PaymentService paymentService;
     @Value("${server.port}")
     String serverPort;
     @PostMapping("/payment/create")
